@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sultan Sanjar Mughis - Portfolio</title>
+    <meta name="description" content="Sultan Sanjar Mughis - Computer Engineer specializing in mobile apps, web development, and e-commerce solutions. Based in Turkey.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Section Navigation Dots -->
+    <div class="section-dots" id="section-dots">
+        <div class="dot active" data-section="Home" data-target="hero"></div>
+        <div class="dot" data-section="About" data-target="about"></div>
+        <div class="dot" data-section="Services" data-target="services"></div>
+        <div class="dot" data-section="Contact" data-target="contact"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+
+    <!-- Language Toggle Button -->
+    <div class="language-toggle" id="language-toggle">
+        <button class="lang-btn active" data-lang="en" aria-label="English">
+            <img src="https://flagcdn.com/16x12/us.png" alt="USA Flag" class="flag-img">
+        </button>
+        <button class="lang-btn" data-lang="tr" aria-label="Türkçe">
+            <img src="https://flagcdn.com/16x12/tr.png" alt="Turkey Flag" class="flag-img">
+        </button>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="logo" aria-label="Sultan Sanjar Mughis - Go to top">
+                SSMAI
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section id="hero" class="hero" role="banner">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to SSM AI services</h1>
+                    <p class="subtitle">Computer Engineer | Mobile & Web Developer | SSM Ai Service Ltd</p>
+                    <p class="description">I create innovative, AI-powered digital solutions specializing in customer engagement automation, modern web applications, mobile apps, and digital menu systems for businesses.</p>
+                    <p class="tour-text">Let's have a tour 🚀</p>
+                    <div class="cta-buttons">
+                        <a href="#services" class="btn btn-primary">View My Services</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax BG between Home and About -->
+        <section class="parallax-bg parallax-bg-1"></section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="heading">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm Sultan Sanjar Mughis, a passionate Computer Engineer with 2+ years of experience in creating modern, responsive, and visually appealing digital experiences. My journey began with a curiosity for how things work in the digital world, and it has evolved into a career dedicated to crafting solutions that make a difference.</p>
+                        <p>I specialize in social media platforms, e-commerce solutions, mobile app development, and web applications. My expertise includes front-end and back-end technologies, and I'm always exploring new technologies to deliver cutting-edge solutions for my clients.</p>
+                        <p>Based in Safranbolu, Karabuk, Turkey, I'm available for new projects and typically respond within 24 hours. When I'm not coding, you can find me exploring new technologies or contributing to innovative projects.</p>
+                    </div>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            <h3>Mobile Apps</h3>
+                            <p>iOS, Android, Cross-platform Development</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            <h3>E-Commerce</h3>
+                            <p>Online Stores, Payment Integration, CMS</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            <h3>Social Media</h3>
+                            <p>Platform Integration, API Development</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <h3>Web Apps</h3>
+                            <p>Full-Stack Development, Modern Frameworks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax BG between About and Services -->
+        <section class="parallax-bg parallax-bg-2"></section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <h2 class="heading">My Services</h2>
+                
+                <!-- Mobile Service Tabs -->
+                <div class="service-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="all">All</button>
+                        <button class="tab-btn" data-tab="web">Web</button>
+                        <button class="tab-btn" data-tab="mobile">Mobile</button>
+                        <button class="tab-btn" data-tab="ecommerce">E-Commerce</button>
+                    </div>
+                    
+                    <div class="service-tab-content active" id="tab-all">
+                        <div class="service-grid">
+                            <article class="service-item" data-category="web">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web development workspace with code on multiple screens">
+                                <div class="service-content">
+                                    <h3>Web Development</h3>
+                                    <p>Custom websites and web applications built with modern technologies. From simple landing pages to complex e-commerce platforms, I deliver high-quality solutions tailored to your business needs.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">Custom Solutions</span>
+                                        <span class="feature-tag">Responsive Design</span>
+                                        <span class="feature-tag">SEO Optimized</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="service-item" data-category="mobile">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile app development showing multiple device screens">
+                                <div class="service-content">
+                                    <h3>Mobile App Development</h3>
+                                    <p>Native and cross-platform mobile applications for iOS and Android. I build scalable, performant apps that provide seamless user experiences across all devices.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">Cross-Platform</span>
+                                        <span class="feature-tag">Native Performance</span>
+                                        <span class="feature-tag">App Store Ready</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="service-item" data-category="ecommerce">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI-powered customer engagement showing automated support agents">
+                                <div class="service-content">
+                                    <h3>AI-Powered Customer Engagement</h3>
+                                    <p>I'll set up AI-powered customer support agents to handle inquiries on your website, Instagram, and WhatsApp. These bots can provide instant support, manage common questions, and help you scale your business's customer service.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">24/7 AI Agents</span>
+                                        <span class="feature-tag">Omnichannel Support</span>
+                                        <span class="feature-tag">Actionable Analytics</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web development workspace with code on multiple screens">
+                        <div class="service-content">
+                            <h3>Web Development</h3>
+                            <p>Custom websites and web applications built with modern technologies. From simple landing pages to complex e-commerce platforms, I deliver high-quality solutions tailored to your business needs.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Custom Solutions</span>
+                                <span class="feature-tag">Responsive Design</span>
+                                <span class="feature-tag">SEO Optimized</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UI/UX design process with wireframes and prototypes">
+                        <div class="service-content">
+                            <h3>UI/UX Design</h3>
+                            <p>User-centered design solutions that combine aesthetics with functionality. I create intuitive interfaces that enhance user experience and drive engagement for your digital products.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">User Research</span>
+                                <span class="feature-tag">Wireframing</span>
+                                <span class="feature-tag">Prototyping</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile app development showing multiple device screens">
+                        <div class="service-content">
+                            <h3>Mobile App Development</h3>
+                            <p>Native and cross-platform mobile applications for iOS and Android. I build scalable, performant apps that provide seamless user experiences across all devices.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Cross-Platform</span>
+                                <span class="feature-tag">Native Performance</span>
+                                <span class="feature-tag">App Store Ready</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI-powered customer engagement showing automated support agents">
+                        <div class="service-content">
+                            <h3>AI-Powered Customer Engagement</h3>
+                            <p>I'll set up AI-powered customer support agents to handle inquiries on your website, Instagram, and WhatsApp. These bots can provide instant support, manage common questions, and help you scale your business's customer service.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">24/7 AI Agents</span>
+                                <span class="feature-tag">Omnichannel Support</span>
+                                <span class="feature-tag">Actionable Analytics</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QR code digital menu solution for restaurants">
+                        <div class="service-content">
+                            <h3>QR Code + Digital Menu Solutions</h3>
+                            <p>I'll create a digital menu for your restaurant or cafe that customers can access by simply scanning a QR code with their phone. This modern, contactless solution allows you to eliminate physical menus and showcase your offerings in a professional, interactive format.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Update Instantly</span>
+                                <span class="feature-tag">Go Contactless</span>
+                                <span class="feature-tag">Enhance Engagement</span>
+                                <span class="feature-tag">Boost Efficiency</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maintenance and support dashboard showing system monitoring">
+                        <div class="service-content">
+                            <h3>Maintenance & Support</h3>
+                            <p>Ongoing maintenance and support services to keep your digital products running smoothly. Regular updates, security patches, and performance monitoring.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">24/7 Support</span>
+                                <span class="feature-tag">Security Updates</span>
+                                <span class="feature-tag">Performance Monitoring</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax BG between Services and Contact -->
+        <section class="parallax-bg parallax-bg-3"></section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="heading">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's work together</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. I'm available for new projects and typically respond within 12 hours. Best time to contact me is between 8 AM - 11 PM (Turkey time). Preferred contact methods are WhatsApp and Instagram.</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:sultan0783822120@gmail.com" class="contact-link">sultan0783822120@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div class="contact-phone-links">
+                                <a href="tel:+905525691563" class="contact-link">+90 552 569 15 63</a>
+                                <a href="https://wa.me/905525691563" class="contact-link whatsapp-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <a href="https://www.google.com/maps/search/Safranbolu,+Karabuk,+Turkey" target="_blank" rel="noopener noreferrer" class="contact-link">Safranbolu, Karabuk, Turkey</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <span>Available for new projects</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/sultanSM6" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sultan-sanjar-mughis-01933a196/" target="_blank" rel="noopener noreferrer" aria-label="Connect with me on LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://x.com/erkin__turan" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (Twitter)">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nemeto_sm/" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xblapnvw" method="POST" novalidate>
+                        <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-describedby="name-error">
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-describedby="email-error">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required aria-describedby="subject-error">
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or question..." required aria-describedby="message-error"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sultan Sanjar Mughis</h3>
+                    <p>Computer Engineer passionate about building amazing digital experiences. Specializing in social media, e-commerce, mobile apps, and web applications.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/sultanSM6" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sultan-sanjar-mughis-01933a196/" target="_blank" rel="noopener noreferrer" aria-label="Connect with me on LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://x.com/erkin__turan" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (Twitter)">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nemeto_sm/" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Mobile App Development</li>
+                        <li>AI-Powered Customer Engagement</li>
+                        <li>Social Media Integration</li>
+                        <li>Web Applications</li>
+                        <li>QR Code + Digital Menu Solutions</li>
+                        <li>Maintenance & Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sultan Sanjar Mughis. All rights reserved. | Built with passion and dedication</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
