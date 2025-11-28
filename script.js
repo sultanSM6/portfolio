@@ -338,29 +338,7 @@
             themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
-        // Mobile Service Tabs Functionality
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const serviceItems = document.querySelectorAll('.service-item');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetTab = button.getAttribute('data-tab');
-                
-                // Update active tab button
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // Filter service items
-                serviceItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-                    if (targetTab === 'all' || category === targetTab) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
+        // Mobile tabs removed: services are displayed via the single .service-grid on all screen sizes.
 
         // Language Toggle Functionality
         const langButtons = document.querySelectorAll('.lang-btn');

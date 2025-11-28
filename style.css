@@ -1677,16 +1677,7 @@
             .service-tabs {
                 display: block;
             }
-
-            .service-grid {
-                display: none;
-            }
-
-            .service-tab-content .service-grid {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            /* Keep the main .service-grid visible on mobile to avoid duplicated content and ensure a single source of truth. */
         }
 
       
