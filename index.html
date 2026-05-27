@@ -128,88 +128,203 @@
             <div class="container">
                 <h2 class="heading">My Services</h2>
                 
-                <!-- Mobile tabs removed to keep a single source of truth for services. The main .service-grid below is now used on both desktop and mobile. -->
+                <!-- Mobile Service Tabs -->
+                <div class="service-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="all">All</button>
+                        <button class="tab-btn" data-tab="web">Web</button>
+                        <button class="tab-btn" data-tab="mobile">Mobile</button>
+                        <button class="tab-btn" data-tab="ecommerce">E-Commerce</button>
+                    </div>
+                    
+                    <div class="service-tab-content active" id="tab-all">
+                        <div class="service-grid">
+                            <article class="service-item" data-category="web">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web development workspace with code on multiple screens">
+                                <div class="service-content">
+                                    <h3>Web Development</h3>
+                                    <p>Custom websites and web applications built with modern technologies. From simple landing pages to complex e-commerce platforms, I deliver high-quality solutions tailored to your business needs.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">Custom Solutions</span>
+                                        <span class="feature-tag">Responsive Design</span>
+                                        <span class="feature-tag">SEO Optimized</span>
+                                    </div>
+                                </div>
+                            </article>
 
-                <div class="service-grid">
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web development workspace with code on multiple screens">
-                        <div class="service-content">
-                            <h3>Web Development</h3>
-                            <p>Custom websites and web applications built with modern technologies. From simple landing pages to complex e-commerce platforms, I deliver high-quality solutions tailored to your business needs.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Custom Solutions</span>
-                                <span class="feature-tag">Responsive Design</span>
-                                <span class="feature-tag">SEO Optimized</span>
-                            </div>
-                        </div>
-                    </article>
+                            <article class="service-item" data-category="mobile">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile app development showing multiple device screens">
+                                <div class="service-content">
+                                    <h3>Mobile App Development</h3>
+                                    <p>Native and cross-platform mobile applications for iOS and Android. I build scalable, performant apps that provide seamless user experiences across all devices.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">Cross-Platform</span>
+                                        <span class="feature-tag">Native Performance</span>
+                                        <span class="feature-tag">App Store Ready</span>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UI/UX design process with wireframes and prototypes">
-                        <div class="service-content">
-                            <h3>UI/UX Design</h3>
-                            <p>User-centered design solutions that combine aesthetics with functionality. I create intuitive interfaces that enhance user experience and drive engagement for your digital products.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">User Research</span>
-                                <span class="feature-tag">Wireframing</span>
-                                <span class="feature-tag">Prototyping</span>
-                            </div>
+                            <article class="service-item" data-category="ecommerce">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI-powered customer engagement showing automated support agents">
+                                <div class="service-content">
+                                    <h3>AI-Powered Customer Engagement</h3>
+                                    <p>I'll set up AI-powered customer support agents to handle inquiries on your website, Instagram, and WhatsApp. These bots can provide instant support, manage common questions, and help you scale your business's customer service.</p>
+                                    <div class="service-features">
+                                        <span class="feature-tag">24/7 AI Agents</span>
+                                        <span class="feature-tag">Omnichannel Support</span>
+                                        <span class="feature-tag">Actionable Analytics</span>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                    </article>
-
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile app development showing multiple device screens">
-                        <div class="service-content">
-                            <h3>Mobile App Development</h3>
-                            <p>Native and cross-platform mobile applications for iOS and Android. I build scalable, performant apps that provide seamless user experiences across all devices.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Cross-Platform</span>
-                                <span class="feature-tag">Native Performance</span>
-                                <span class="feature-tag">App Store Ready</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI-powered customer engagement showing automated support agents">
-                        <div class="service-content">
-                            <h3>AI-Powered Customer Engagement</h3>
-                            <p>I'll set up AI-powered customer support agents to handle inquiries on your website, Instagram, and WhatsApp. These bots can provide instant support, manage common questions, and help you scale your business's customer service.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">24/7 AI Agents</span>
-                                <span class="feature-tag">Omnichannel Support</span>
-                                <span class="feature-tag">Actionable Analytics</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QR code digital menu solution for restaurants">
-                        <div class="service-content">
-                            <h3>QR Code + Digital Menu Solutions</h3>
-                            <p>I'll create a digital menu for your restaurant or cafe that customers can access by simply scanning a QR code with their phone. This modern, contactless solution allows you to eliminate physical menus and showcase your offerings in a professional, interactive format.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Update Instantly</span>
-                                <span class="feature-tag">Go Contactless</span>
-                                <span class="feature-tag">Enhance Engagement</span>
-                                <span class="feature-tag">Boost Efficiency</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="service-item">
-                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maintenance and support dashboard showing system monitoring">
-                        <div class="service-content">
-                            <h3>Maintenance & Support</h3>
-                            <p>Ongoing maintenance and support services to keep your digital products running smoothly. Regular updates, security patches, and performance monitoring.</p>
-                            <div class="service-features">
-                                <span class="feature-tag">24/7 Support</span>
-                                <span class="feature-tag">Security Updates</span>
-                                <span class="feature-tag">Performance Monitoring</span>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
+
+<style>
+    /* Makes service cards into clickable links without breaking the design */
+    .service-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    .service-card-link .service-item {
+        cursor: pointer;
+    }
+    /* "View Template →" badge appears on hover */
+    .service-card-link .service-item::after {
+        content: 'View Template →';
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background: linear-gradient(45deg, var(--primary-cyan), var(--primary-blue));
+        color: #000;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 6px 14px;
+        border-radius: 4px;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: all 0.25s ease;
+        pointer-events: none;
+    }
+    .service-card-link:hover .service-item::after,
+    .service-card-link:focus .service-item::after {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .service-card-link:focus {
+        outline: 2px solid var(--primary-cyan);
+        outline-offset: 4px;
+        border-radius: 4px;
+    }
+    /* Extra bottom padding so the badge doesn't cover the feature tags */
+    .service-card-link .service-content {
+        padding-bottom: 3rem;
+    }
+</style>
+
+<div class="service-grid">
+
+    <!-- Card 1: Web Development → links to restaurant template -->
+    <a href="templates/templates.html" class="service-card-link" aria-label="View Restaurant Website Template">
+        <article class="service-item" data-category="web">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web development workspace">
+            <div class="service-content">
+                <h3>Web Development</h3>
+                <p>Custom websites and web applications built with modern technologies. From simple landing pages to complex e-commerce platforms, I deliver high-quality solutions tailored to your business needs.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Custom Solutions</span>
+                    <span class="feature-tag">Responsive Design</span>
+                    <span class="feature-tag">SEO Optimized</span>
+                </div>
+            </div>
+        </article>
+    </a>
+
+    <!-- Card 2: UI/UX Design → links to cafe template -->
+    <a href="templates/cafe.html" class="service-card-link" aria-label="View Cafe Website Template">
+        <article class="service-item" data-category="web">
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UI/UX design wireframes">
+            <div class="service-content">
+                <h3>UI/UX Design</h3>
+                <p>User-centered design solutions that combine aesthetics with functionality. I create intuitive interfaces that enhance user experience and drive engagement for your digital products.</p>
+                <div class="service-features">
+                    <span class="feature-tag">User Research</span>
+                    <span class="feature-tag">Wireframing</span>
+                    <span class="feature-tag">Prototyping</span>
+                </div>
+            </div>
+        </article>
+    </a>
+
+    <!-- Card 3: Mobile App → links to lawyer template -->
+    <a href="templates/lawyer.html" class="service-card-link" aria-label="View Law Firm Website Template">
+        <article class="service-item" data-category="mobile">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile app development">
+            <div class="service-content">
+                <h3>Mobile App Development</h3>
+                <p>Native and cross-platform mobile applications for iOS and Android. I build scalable, performant apps that provide seamless user experiences across all devices.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Cross-Platform</span>
+                    <span class="feature-tag">Native Performance</span>
+                    <span class="feature-tag">App Store Ready</span>
+                </div>
+            </div>
+        </article>
+    </a>
+
+    <!-- Card 4: AI Engagement → links to hotel template -->
+    <a href="templates/hotel.html" class="service-card-link" aria-label="View Hotel Website Template">
+        <article class="service-item" data-category="ecommerce">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI-powered customer engagement">
+            <div class="service-content">
+                <h3>AI-Powered Customer Engagement</h3>
+                <p>I'll set up AI-powered customer support agents to handle inquiries on your website, Instagram, and WhatsApp. These bots can provide instant support, manage common questions, and help scale your customer service.</p>
+                <div class="service-features">
+                    <span class="feature-tag">24/7 AI Agents</span>
+                    <span class="feature-tag">Omnichannel Support</span>
+                    <span class="feature-tag">Actionable Analytics</span>
+                </div>
+            </div>
+        </article>
+    </a>
+
+    <!-- Card 5: QR / Digital Menu → links to store template -->
+    <a href="templates/store.html" class="service-card-link" aria-label="View Store Website Template">
+        <article class="service-item" data-category="ecommerce">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QR code digital menu">
+            <div class="service-content">
+                <h3>QR Code + Digital Menu Solutions</h3>
+                <p>I'll create a digital menu for your restaurant or cafe that customers can access by scanning a QR code. This modern, contactless solution eliminates physical menus and showcases your offerings professionally.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Update Instantly</span>
+                    <span class="feature-tag">Go Contactless</span>
+                    <span class="feature-tag">Enhance Engagement</span>
+                    <span class="feature-tag">Boost Efficiency</span>
+                </div>
+            </div>
+        </article>
+    </a>
+
+    <!-- Card 6: Maintenance — no template page, stays as info card -->
+    <article class="service-item" data-category="web">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maintenance and support">
+        <div class="service-content">
+            <h3>Maintenance &amp; Support</h3>
+            <p>Ongoing maintenance and support services to keep your digital products running smoothly. Regular updates, security patches, and performance monitoring.</p>
+            <div class="service-features">
+                <span class="feature-tag">24/7 Support</span>
+                <span class="feature-tag">Security Updates</span>
+                <span class="feature-tag">Performance Monitoring</span>
+            </div>
+        </div>
+    </article>
+
+</div><!-- END .service-grid -->
             </div>
         </section>
 

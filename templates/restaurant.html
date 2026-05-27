@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website Template — SSM AI Services</title>
+    <meta name="description" content="Modern restaurant website with digital menu, reservations, WhatsApp, and Google Maps. By Sultan Sanjar Mughis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- IMPORTANT: ../ goes one folder up to reach style.css in the Portfolio root -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="template-extra.css">
+</head>
+<body class="template-page">
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen"><div class="loader"></div></div>
+
+    <!-- Breadcrumb — "Portfolio > Restaurant Template" -->
+    <div class="template-breadcrumb" role="navigation" aria-label="Breadcrumb">
+        <a href="../index.html"><i class="fas fa-home"></i>&nbsp; Portfolio</a>
+        <span class="sep">›</span>
+        <span class="current">Restaurant Template</span>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Logo links back to main portfolio -->
+            <a href="../index.html" class="logo" aria-label="Back to Portfolio">SSMAI</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#cta">Get This Template</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- ═══ HERO ══════════════════════════════════════════ -->
+        <section id="hero" class="template-hero section-padding">
+            <!-- Background image behind the hero text -->
+            <div class="template-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80');"></div>
+            <div class="container">
+                <div class="template-hero-content">
+                    <p class="template-hero-eyebrow"><i class="fas fa-utensils"></i>&nbsp;&nbsp;Restaurant Template</p>
+                    <h1>A Website Your Guests Will Remember</h1>
+                    <p>A complete, mobile-first restaurant website with digital menu, online reservations, WhatsApp chat, photo gallery, Google Maps, and a stunning design — all customised to your brand.</p>
+                    <div class="template-hero-cta">
+                        <a href="../index.html#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Order This Template
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <i class="fas fa-list-ul"></i>&nbsp; See What's Included
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ WHAT'S INCLUDED ═══════════════════════════════ -->
+        <section id="features" class="template-features section-padding">
+            <div class="container">
+                <h2 class="heading">What's Included</h2>
+                <div class="template-features-grid">
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-qrcode"></i></div>
+                        <h3>QR Digital Menu</h3>
+                        <p>Customers scan a QR code and browse your full menu on their phone — no app needed. Update prices or dishes instantly without reprinting anything.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Reservation Form</h3>
+                        <p>A clean booking form that sends reservation requests directly to your email or WhatsApp. Captures name, date, time, and party size automatically.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                        <h3>WhatsApp Button</h3>
+                        <p>Sticky floating WhatsApp button so customers can reach you in one tap. Pre-filled message templates — they don't need to type anything.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-images"></i></div>
+                        <h3>Photo Gallery</h3>
+                        <p>Beautiful gallery showcasing your dishes, interior, and atmosphere. Lightbox zoom effect. Fast-loading with lazy loading on all images.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3>Google Maps Embed</h3>
+                        <p>Interactive map with your exact location, opening hours, and a "Get Directions" button — so no customer ever gets lost finding you.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Fully Responsive</h3>
+                        <p>Looks perfect on every device — phone, tablet, and desktop. Built mobile-first because most of your customers browse on their phones.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-star"></i></div>
+                        <h3>Reviews Section</h3>
+                        <p>Display your best Google or TripAdvisor reviews right on the homepage to build trust with new visitors the moment they land on your site.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fab fa-instagram"></i></div>
+                        <h3>Social Media Links</h3>
+                        <p>Instagram, Facebook, and TripAdvisor icons in the header and footer so visitors can follow your latest updates with one click.</p>
+                    </div>
+
+                    <div class="template-feature-card">
+                        <div class="icon"><i class="fas fa-search"></i></div>
+                        <h3>SEO Ready</h3>
+                        <p>Proper meta tags, schema.org Restaurant markup, and fast load times to help you rank higher on Google for local searches near you.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ GALLERY ════════════════════════════════════════ -->
+        <section id="gallery" class="template-gallery section-padding">
+            <div class="container">
+                <h2 class="heading">Design Previews</h2>
+                <p style="text-align:center; color:var(--text-secondary); max-width:600px; margin:0 auto 0 auto;">
+                    Sample section layouts. Every detail is customised with your logo, colours, photos, and menu content.
+                </p>
+                <div class="template-gallery-grid">
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant hero section preview" loading="lazy">
+                        <div class="overlay"><span>Hero Section</span></div>
+                    </div>
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Menu section preview" loading="lazy">
+                        <div class="overlay"><span>Digital Menu</span></div>
+                    </div>
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80" alt="Photo gallery section" loading="lazy">
+                        <div class="overlay"><span>Photo Gallery</span></div>
+                    </div>
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Reservation form preview" loading="lazy">
+                        <div class="overlay"><span>Reservation Form</span></div>
+                    </div>
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Featured dishes" loading="lazy">
+                        <div class="overlay"><span>Featured Dishes</span></div>
+                    </div>
+
+                    <div class="template-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=800&q=80" alt="Map and contact section" loading="lazy">
+                        <div class="overlay"><span>Map &amp; Contact</span></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ CTA BANNER ═════════════════════════════════════ -->
+        <section id="cta" class="template-cta-banner">
+            <div class="container">
+                <h2>Ready to Launch Your Restaurant Online?</h2>
+                <p>One fixed price. Delivered in 5–7 days. Hosted on Netlify for free. No monthly fees, no page-builder lock-in — you own everything.</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>&nbsp; Get a Quote
+                    </a>
+                    <a href="https://wa.me/905525691563?text=Hi!%20I%27m%20interested%20in%20the%20Restaurant%20website%20template." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i>&nbsp; WhatsApp Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sultan Sanjar Mughis</h3>
+                    <p>Computer Engineer building modern websites for restaurants, cafes, hotels, law firms, and small businesses across Turkey and beyond.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/sultanSM6" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sultan-sanjar-mughis-01933a196/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nemeto_sm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Other Templates</h3>
+                    <ul>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="cafe.html">Cafe</a></li>
+                        <li><a href="lawyer.html">Law Firm</a></li>
+                        <li><a href="hotel.html">Hotel</a></li>
+                        <li><a href="store.html">Store / Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">← Back to Portfolio</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sultan Sanjar Mughis. All rights reserved. | Built with passion and dedication</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Uses template.js (same folder), NOT the main script.js -->
+    <script src="template.js"></script>
+</body>
+</html>
