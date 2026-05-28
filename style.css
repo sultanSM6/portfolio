@@ -394,7 +394,7 @@
         /* Navigation */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 36px;
             width: 100%;
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
@@ -1087,12 +1087,12 @@
         /* Language Toggle */
         .language-toggle {
             position: fixed;
-            top: 130px;
+            top: 100px;
             right: 20px;
             display: flex;
             flex-direction: column;
             gap: 5px;
-            z-index: 1000;
+            z-index: 1001;
         }
 
         .lang-btn {
@@ -1555,7 +1555,7 @@
         /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
-            top: 80px;
+            top: 50px;
             right: 20px;
             width: 40px;
             height: 40px;
@@ -1569,7 +1569,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
+            z-index: 1001;
             backdrop-filter: blur(10px);
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
         }
@@ -1647,7 +1647,7 @@
             }
 
             .theme-toggle {
-                top: 70px;
+                top: 45px;
                 right: 15px;
                 width: 35px;
                 height: 35px;
@@ -1658,7 +1658,7 @@
             }
 
             .language-toggle {
-                top: 115px;
+                top: 90px;
                 right: 15px;
                 gap: 3px;
             }

@@ -39,8 +39,8 @@
 }
 [data-theme="light"] .template-breadcrumb a { color: var(--primary-blue); }
 
-/* Push the whole page down so content isn't hidden under the breadcrumb */
-body.template-page { padding-top: 36px; }
+/* Push the whole page down so content isn't hidden under breadcrumb + navbar */
+body.template-page { padding-top: 80px; }
 
 /* ── Hero section ─────────────────────────────────────────── */
 .template-hero {

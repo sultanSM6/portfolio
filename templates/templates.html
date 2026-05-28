@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="template-extra.css">
 
     <style>
-        /* ── Gallery page specific styles ─────────────────── */
-
         .tpl-gallery-hero {
             padding: 10rem 0 4rem;
             text-align: center;
@@ -58,12 +56,7 @@
             margin: 0 auto;
             line-height: 1.8;
         }
-        [data-theme="light"] .tpl-gallery-hero h1 {
-            color: var(--primary-cyan);
-            text-shadow: 0 0 12px rgba(26,54,93,0.3);
-        }
-
-        /* ── Filter tabs ──────────────────────────────────── */
+        [data-theme="light"] .tpl-gallery-hero h1 { color: var(--primary-cyan); text-shadow: 0 0 12px rgba(26,54,93,0.3); }
         .tpl-filter-bar {
             display: flex;
             justify-content: center;
@@ -86,38 +79,17 @@
             cursor: pointer;
             transition: all 0.25s ease;
         }
-        .tpl-filter-btn:hover,
-        .tpl-filter-btn.active {
+        .tpl-filter-btn:hover, .tpl-filter-btn.active {
             background: rgba(0,255,255,0.18);
             border-color: var(--primary-cyan);
             color: var(--primary-cyan);
             box-shadow: 0 0 12px rgba(0,255,255,0.25);
         }
-        [data-theme="light"] .tpl-filter-btn {
-            background: rgba(26,54,93,0.06);
-            border-color: rgba(26,54,93,0.2);
-            color: var(--text-secondary);
-        }
+        [data-theme="light"] .tpl-filter-btn { background: rgba(26,54,93,0.06); border-color: rgba(26,54,93,0.2); color: var(--text-secondary); }
         [data-theme="light"] .tpl-filter-btn:hover,
-        [data-theme="light"] .tpl-filter-btn.active {
-            background: rgba(26,54,93,0.14);
-            border-color: var(--primary-cyan);
-            color: var(--primary-cyan);
-        }
-
-        /* ── Cards grid ───────────────────────────────────── */
-        .tpl-cards-section {
-            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
-            padding: 3rem 0 6rem;
-        }
-        .tpl-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-
-        /* ── Single template card ─────────────────────────── */
+        [data-theme="light"] .tpl-filter-btn.active { background: rgba(26,54,93,0.14); border-color: var(--primary-cyan); color: var(--primary-cyan); }
+        .tpl-cards-section { background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%); padding: 3rem 0 6rem; }
+        .tpl-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2.5rem; margin-top: 2rem; }
         .tpl-card {
             background: linear-gradient(135deg, rgba(0,255,255,0.06) 0%, rgba(255,0,255,0.06) 100%);
             border: 1px solid rgba(0,255,255,0.22);
@@ -129,192 +101,45 @@
             opacity: 0;
             transform: translateY(24px);
         }
-        .tpl-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .tpl-card.hidden-card {
-            display: none;
-        }
-        .tpl-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-cyan);
-            box-shadow: 0 20px 45px rgba(0,255,255,0.18);
-        }
-
-        /* Image area */
-        .tpl-card-img {
-            position: relative;
-            overflow: hidden;
-            height: 220px;
-        }
-        .tpl-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(15%) contrast(1.1);
-            transition: all 0.4s ease;
-            display: block;
-        }
-        .tpl-card:hover .tpl-card-img img {
-            transform: scale(1.06);
-            filter: grayscale(0%) contrast(1.2);
-        }
-        /* Category badge on the image */
+        .tpl-card.visible { opacity: 1; transform: translateY(0); }
+        .tpl-card.hidden-card { display: none; }
+        .tpl-card:hover { transform: translateY(-10px); border-color: var(--primary-cyan); box-shadow: 0 20px 45px rgba(0,255,255,0.18); }
+        .tpl-card-img { position: relative; overflow: hidden; height: 220px; }
+        .tpl-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%) contrast(1.1); transition: all 0.4s ease; display: block; }
+        .tpl-card:hover .tpl-card-img img { transform: scale(1.06); filter: grayscale(0%) contrast(1.2); }
         .tpl-card-badge {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: rgba(0,0,0,0.75);
-            border: 1px solid rgba(0,255,255,0.4);
-            color: var(--primary-cyan);
-            font-family: 'Exo 2', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 5px 12px;
-            border-radius: 3px;
-            backdrop-filter: blur(6px);
+            position: absolute; top: 1rem; left: 1rem;
+            background: rgba(0,0,0,0.75); border: 1px solid rgba(0,255,255,0.4);
+            color: var(--primary-cyan); font-family: 'Exo 2', sans-serif;
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; padding: 5px 12px; border-radius: 3px; backdrop-filter: blur(6px);
         }
-        [data-theme="light"] .tpl-card-badge {
-            background: rgba(255,255,255,0.85);
-            border-color: rgba(26,54,93,0.3);
-            color: var(--primary-blue);
-        }
-
-        /* Card body */
-        .tpl-card-body {
-            padding: 1.8rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .tpl-card-icon {
-            font-size: 1.6rem;
-            color: var(--primary-cyan);
-            text-shadow: 0 0 12px rgba(0,255,255,0.5);
-            margin-bottom: 0.8rem;
-        }
-        .tpl-card-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.8rem;
-        }
+        [data-theme="light"] .tpl-card-badge { background: rgba(255,255,255,0.85); border-color: rgba(26,54,93,0.3); color: var(--primary-blue); }
+        .tpl-card-body { padding: 1.8rem; flex: 1; display: flex; flex-direction: column; }
+        .tpl-card-icon { font-size: 1.6rem; color: var(--primary-cyan); text-shadow: 0 0 12px rgba(0,255,255,0.5); margin-bottom: 0.8rem; }
+        .tpl-card-title { font-family: 'Orbitron', monospace; font-size: 1.15rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; }
         [data-theme="light"] .tpl-card-title { color: var(--primary-cyan); }
-
-        .tpl-card-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            flex: 1;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Feature pills */
-        .tpl-card-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-bottom: 1.8rem;
-        }
-        .tpl-pill {
-            padding: 4px 10px;
-            background: rgba(0,255,255,0.08);
-            border: 1px solid rgba(0,255,255,0.25);
-            color: var(--primary-cyan);
-            font-family: 'Exo 2', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 3px;
-        }
-        [data-theme="light"] .tpl-pill {
-            background: rgba(26,54,93,0.07);
-            border-color: rgba(26,54,93,0.2);
-            color: var(--primary-blue);
-        }
-
-        /* View button */
+        .tpl-card-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.5rem; }
+        .tpl-card-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.8rem; }
+        .tpl-pill { padding: 4px 10px; background: rgba(0,255,255,0.08); border: 1px solid rgba(0,255,255,0.25); color: var(--primary-cyan); font-family: 'Exo 2', sans-serif; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 3px; }
+        [data-theme="light"] .tpl-pill { background: rgba(26,54,93,0.07); border-color: rgba(26,54,93,0.2); color: var(--primary-blue); }
         .tpl-card-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
             padding: 13px 20px;
             background: linear-gradient(45deg, var(--primary-cyan), var(--primary-blue));
-            color: #000;
-            font-family: 'Exo 2', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.25s ease;
-            border: 2px solid var(--primary-cyan);
+            color: #000; font-family: 'Exo 2', sans-serif; font-size: 0.85rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none;
+            border-radius: 4px; transition: all 0.25s ease; border: 2px solid var(--primary-cyan);
         }
-        .tpl-card-btn:hover {
-            background: linear-gradient(45deg, var(--primary-blue), var(--primary-cyan));
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,255,255,0.35);
-            color: #000;
-        }
+        .tpl-card-btn:hover { background: linear-gradient(45deg, var(--primary-blue), var(--primary-cyan)); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,255,255,0.35); color: #000; }
         [data-theme="light"] .tpl-card-btn { color: #fff; }
         [data-theme="light"] .tpl-card-btn:hover { color: #fff; }
-
-        /* ── "No results" message ─────────────────────────── */
-        .tpl-no-results {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-muted);
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1rem;
-            display: none;
-        }
-
-        /* ── CTA strip at the bottom ──────────────────────── */
-        .tpl-bottom-cta {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, rgba(0,255,255,0.07) 0%, rgba(255,0,255,0.07) 100%);
-            border-top: 1px solid rgba(0,255,255,0.18);
-        }
-        .tpl-bottom-cta h2 {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            font-weight: 800;
-            color: var(--primary-cyan);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 15px rgba(0,255,255,0.35);
-        }
-        .tpl-bottom-cta p {
-            color: var(--text-secondary);
-            max-width: 520px;
-            margin: 0 auto 2.2rem;
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
-        .tpl-bottom-cta .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-        [data-theme="light"] .tpl-bottom-cta {
-            background: linear-gradient(135deg, rgba(26,54,93,0.05) 0%, rgba(43,108,176,0.05) 100%);
-            border-color: rgba(26,54,93,0.12);
-        }
-
-        /* ── Responsive ───────────────────────────────────── */
+        .tpl-no-results { grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-family: 'Exo 2', sans-serif; font-size: 1rem; display: none; }
+        .tpl-bottom-cta { text-align: center; padding: 5rem 2rem; background: linear-gradient(135deg, rgba(0,255,255,0.07) 0%, rgba(255,0,255,0.07) 100%); border-top: 1px solid rgba(0,255,255,0.18); }
+        .tpl-bottom-cta h2 { font-family: 'Orbitron', monospace; font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 800; color: var(--primary-cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; text-shadow: 0 0 15px rgba(0,255,255,0.35); }
+        .tpl-bottom-cta p { color: var(--text-secondary); max-width: 520px; margin: 0 auto 2.2rem; line-height: 1.7; font-size: 1.05rem; }
+        .tpl-bottom-cta .cta-buttons { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
+        [data-theme="light"] .tpl-bottom-cta { background: linear-gradient(135deg, rgba(26,54,93,0.05) 0%, rgba(43,108,176,0.05) 100%); border-color: rgba(26,54,93,0.12); }
         @media (max-width: 768px) {
             .tpl-cards-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .tpl-filter-bar { gap: 0.5rem; padding: 2rem 1rem 0; }
@@ -322,16 +147,16 @@
         }
     </style>
 </head>
-<body class="template-page">
+<body class="template-page" data-page="templates">
 
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading-screen"><div class="loader"></div></div>
 
     <!-- Breadcrumb -->
     <div class="template-breadcrumb" role="navigation" aria-label="Breadcrumb">
-        <a href="../index.html"><i class="fas fa-home"></i>&nbsp; Portfolio</a>
+        <a href="../index.html"><i class="fas fa-home"></i>&nbsp; <span data-i18n="breadcrumb-portfolio">Portfolio</span></a>
         <span class="sep">›</span>
-        <span class="current">All Templates</span>
+        <span class="current" data-i18n="breadcrumb-current">All Templates</span>
     </div>
 
     <!-- Theme Toggle -->
@@ -339,15 +164,25 @@
         <i class="fas fa-sun" id="theme-icon"></i>
     </button>
 
+    <!-- Language Toggle -->
+    <div class="language-toggle" id="language-toggle">
+        <button class="lang-btn active" data-lang="en" aria-label="English">
+            <img src="https://flagcdn.com/16x12/us.png" alt="USA Flag" class="flag-img">
+        </button>
+        <button class="lang-btn" data-lang="tr" aria-label="Türkçe">
+            <img src="https://flagcdn.com/16x12/tr.png" alt="Turkey Flag" class="flag-img">
+        </button>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <a href="../index.html" class="logo">SSMAI</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="../index.html#about" data-i18n="nav-about">About</a></li>
+                <li><a href="../index.html#services" data-i18n="nav-services">Services</a></li>
+                <li><a href="../index.html#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -357,158 +192,156 @@
 
     <main id="main-content">
 
-        <!-- ── Hero ─────────────────────────────────────────── -->
+        <!-- Hero -->
         <section class="tpl-gallery-hero">
             <div class="container">
-                <p class="eyebrow"><i class="fas fa-layer-group"></i>&nbsp;&nbsp;Template Gallery</p>
-                <h1>Choose Your Template</h1>
-                <p>Every template is fully customised with your brand, content, and colours — then deployed and handed over to you within 5–7 days.</p>
+                <p class="eyebrow" data-i18n="hero-eyebrow"><i class="fas fa-layer-group"></i>&nbsp;&nbsp;Template Gallery</p>
+                <h1 data-i18n="hero-title">Choose Your Template</h1>
+                <p data-i18n="hero-desc">Every template is fully customised with your brand, content, and colours — then deployed and handed over to you within 5–7 days.</p>
             </div>
         </section>
 
-        <!-- ── Filter tabs ───────────────────────────────────── -->
+        <!-- Filter tabs -->
         <div class="tpl-filter-bar">
-            <button class="tpl-filter-btn active" data-filter="all">All Templates</button>
-            <button class="tpl-filter-btn" data-filter="food">Food &amp; Drink</button>
-            <button class="tpl-filter-btn" data-filter="hospitality">Hospitality</button>
-            <button class="tpl-filter-btn" data-filter="business">Business</button>
-            <button class="tpl-filter-btn" data-filter="retail">Retail</button>
+            <button class="tpl-filter-btn active" data-filter="all"         data-i18n="filter-all">All Templates</button>
+            <button class="tpl-filter-btn"         data-filter="food"        data-i18n="filter-food">Food &amp; Drink</button>
+            <button class="tpl-filter-btn"         data-filter="hospitality" data-i18n="filter-hospitality">Hospitality</button>
+            <button class="tpl-filter-btn"         data-filter="business"    data-i18n="filter-business">Business</button>
+            <button class="tpl-filter-btn"         data-filter="retail"      data-i18n="filter-retail">Retail</button>
         </div>
 
-        <!-- ── Cards grid ────────────────────────────────────── -->
+        <!-- Cards grid -->
         <section class="tpl-cards-section">
             <div class="container">
                 <div class="tpl-cards-grid" id="tpl-cards-grid">
 
-                    <!-- ═══ RESTAURANT ════════════════════════ -->
+                    <!-- RESTAURANT -->
                     <div class="tpl-card" data-category="food">
                         <div class="tpl-card-img">
                             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant template preview" loading="lazy">
-                            <span class="tpl-card-badge">Restaurant</span>
+                            <span class="tpl-card-badge" data-i18n="card-restaurant-badge">Restaurant</span>
                         </div>
                         <div class="tpl-card-body">
                             <div class="tpl-card-icon"><i class="fas fa-utensils"></i></div>
-                            <h3 class="tpl-card-title">Restaurant Website</h3>
-                            <p class="tpl-card-desc">Full restaurant website with QR digital menu, online reservation form, WhatsApp button, photo gallery, Google Maps, and customer reviews.</p>
+                            <h3 class="tpl-card-title" data-i18n="card-restaurant-title">Restaurant Website</h3>
+                            <p class="tpl-card-desc" data-i18n="card-restaurant-desc">Full restaurant website with QR digital menu, online reservation form, WhatsApp button, photo gallery, Google Maps, and customer reviews.</p>
                             <div class="tpl-card-pills">
-                                <span class="tpl-pill">Digital Menu</span>
-                                <span class="tpl-pill">Reservations</span>
-                                <span class="tpl-pill">WhatsApp</span>
-                                <span class="tpl-pill">Gallery</span>
-                                <span class="tpl-pill">Maps</span>
+                                <span class="tpl-pill" data-i18n="card-restaurant-pill-0">Digital Menu</span>
+                                <span class="tpl-pill" data-i18n="card-restaurant-pill-1">Reservations</span>
+                                <span class="tpl-pill" data-i18n="card-restaurant-pill-2">WhatsApp</span>
+                                <span class="tpl-pill" data-i18n="card-restaurant-pill-3">Gallery</span>
+                                <span class="tpl-pill" data-i18n="card-restaurant-pill-4">Maps</span>
                             </div>
-                            <a href="restaurant.html" class="tpl-card-btn">
+                            <a href="restaurant.html" class="tpl-card-btn" data-i18n="card-restaurant-btn">
                                 <i class="fas fa-eye"></i> View Template
                             </a>
                         </div>
                     </div>
 
-                    <!-- ═══ CAFE ══════════════════════════════ -->
+                    <!-- CAFE -->
                     <div class="tpl-card" data-category="food">
                         <div class="tpl-card-img">
                             <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cafe template preview" loading="lazy">
-                            <span class="tpl-card-badge">Cafe</span>
+                            <span class="tpl-card-badge" data-i18n="card-cafe-badge">Cafe</span>
                         </div>
                         <div class="tpl-card-body">
                             <div class="tpl-card-icon"><i class="fas fa-coffee"></i></div>
-                            <h3 class="tpl-card-title">Cafe Website</h3>
-                            <p class="tpl-card-desc">Modern cafe website with drinks menu, daily specials banner, takeaway via WhatsApp, Instagram feed, loyalty newsletter, and Google Maps.</p>
+                            <h3 class="tpl-card-title" data-i18n="card-cafe-title">Cafe Website</h3>
+                            <p class="tpl-card-desc" data-i18n="card-cafe-desc">Modern cafe website with drinks menu, daily specials banner, takeaway via WhatsApp, Instagram feed, loyalty newsletter, and Google Maps.</p>
                             <div class="tpl-card-pills">
-                                <span class="tpl-pill">Drinks Menu</span>
-                                <span class="tpl-pill">Takeaway</span>
-                                <span class="tpl-pill">Daily Specials</span>
-                                <span class="tpl-pill">Instagram</span>
+                                <span class="tpl-pill" data-i18n="card-cafe-pill-0">Drinks Menu</span>
+                                <span class="tpl-pill" data-i18n="card-cafe-pill-1">Takeaway</span>
+                                <span class="tpl-pill" data-i18n="card-cafe-pill-2">Daily Specials</span>
+                                <span class="tpl-pill" data-i18n="card-cafe-pill-3">Instagram</span>
                             </div>
-                            <a href="cafe.html" class="tpl-card-btn">
+                            <a href="cafe.html" class="tpl-card-btn" data-i18n="card-cafe-btn">
                                 <i class="fas fa-eye"></i> View Template
                             </a>
                         </div>
                     </div>
 
-                    <!-- ═══ HOTEL ══════════════════════════════ -->
+                    <!-- HOTEL -->
                     <div class="tpl-card" data-category="hospitality">
                         <div class="tpl-card-img">
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel template preview" loading="lazy">
-                            <span class="tpl-card-badge">Hotel</span>
+                            <span class="tpl-card-badge" data-i18n="card-hotel-badge">Hotel</span>
                         </div>
                         <div class="tpl-card-body">
                             <div class="tpl-card-icon"><i class="fas fa-concierge-bell"></i></div>
-                            <h3 class="tpl-card-title">Hotel Website</h3>
-                            <p class="tpl-card-desc">Luxury hotel website with room showcase, booking form, amenities grid, photo gallery, local attractions, and guest reviews to fill more rooms.</p>
+                            <h3 class="tpl-card-title" data-i18n="card-hotel-title">Hotel Website</h3>
+                            <p class="tpl-card-desc" data-i18n="card-hotel-desc">Luxury hotel website with room showcase, booking form, amenities grid, photo gallery, local attractions, and guest reviews to fill more rooms.</p>
                             <div class="tpl-card-pills">
-                                <span class="tpl-pill">Room Showcase</span>
-                                <span class="tpl-pill">Booking Form</span>
-                                <span class="tpl-pill">Amenities</span>
-                                <span class="tpl-pill">Reviews</span>
+                                <span class="tpl-pill" data-i18n="card-hotel-pill-0">Room Showcase</span>
+                                <span class="tpl-pill" data-i18n="card-hotel-pill-1">Booking Form</span>
+                                <span class="tpl-pill" data-i18n="card-hotel-pill-2">Amenities</span>
+                                <span class="tpl-pill" data-i18n="card-hotel-pill-3">Reviews</span>
                             </div>
-                            <a href="hotel.html" class="tpl-card-btn">
+                            <a href="hotel.html" class="tpl-card-btn" data-i18n="card-hotel-btn">
                                 <i class="fas fa-eye"></i> View Template
                             </a>
                         </div>
                     </div>
 
-                    <!-- ═══ LAW FIRM ════════════════════════════ -->
+                    <!-- LAW FIRM -->
                     <div class="tpl-card" data-category="business">
                         <div class="tpl-card-img">
                             <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Law firm template preview" loading="lazy">
-                            <span class="tpl-card-badge">Law Firm</span>
+                            <span class="tpl-card-badge" data-i18n="card-lawyer-badge">Law Firm</span>
                         </div>
                         <div class="tpl-card-body">
                             <div class="tpl-card-icon"><i class="fas fa-balance-scale"></i></div>
-                            <h3 class="tpl-card-title">Law Firm Website</h3>
-                            <p class="tpl-card-desc">Professional law firm website with practice areas, attorney profiles, free consultation form, trust credentials bar, and client testimonials.</p>
+                            <h3 class="tpl-card-title" data-i18n="card-lawyer-title">Law Firm Website</h3>
+                            <p class="tpl-card-desc" data-i18n="card-lawyer-desc">Professional law firm website with practice areas, attorney profiles, free consultation form, trust credentials bar, and client testimonials.</p>
                             <div class="tpl-card-pills">
-                                <span class="tpl-pill">Practice Areas</span>
-                                <span class="tpl-pill">Attorney Profiles</span>
-                                <span class="tpl-pill">Consultation Form</span>
+                                <span class="tpl-pill" data-i18n="card-lawyer-pill-0">Practice Areas</span>
+                                <span class="tpl-pill" data-i18n="card-lawyer-pill-1">Attorney Profiles</span>
+                                <span class="tpl-pill" data-i18n="card-lawyer-pill-2">Consultation Form</span>
                             </div>
-                            <a href="lawyer.html" class="tpl-card-btn">
+                            <a href="lawyer.html" class="tpl-card-btn" data-i18n="card-lawyer-btn">
                                 <i class="fas fa-eye"></i> View Template
                             </a>
                         </div>
                     </div>
 
-                    <!-- ═══ STORE ═══════════════════════════════ -->
+                    <!-- STORE -->
                     <div class="tpl-card" data-category="retail">
                         <div class="tpl-card-img">
                             <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Store template preview" loading="lazy">
-                            <span class="tpl-card-badge">Store / Shop</span>
+                            <span class="tpl-card-badge" data-i18n="card-store-badge">Store / Shop</span>
                         </div>
                         <div class="tpl-card-body">
                             <div class="tpl-card-icon"><i class="fas fa-store"></i></div>
-                            <h3 class="tpl-card-title">Store / Shop Website</h3>
-                            <p class="tpl-card-desc">Modern store website with product catalogue, WhatsApp ordering per product, promotions banner, QR code for in-store, and customer reviews.</p>
+                            <h3 class="tpl-card-title" data-i18n="card-store-title">Store / Shop Website</h3>
+                            <p class="tpl-card-desc" data-i18n="card-store-desc">Modern store website with product catalogue, WhatsApp ordering per product, promotions banner, QR code for in-store, and customer reviews.</p>
                             <div class="tpl-card-pills">
-                                <span class="tpl-pill">Product Catalogue</span>
-                                <span class="tpl-pill">WhatsApp Order</span>
-                                <span class="tpl-pill">Promotions</span>
-                                <span class="tpl-pill">QR Code</span>
+                                <span class="tpl-pill" data-i18n="card-store-pill-0">Product Catalogue</span>
+                                <span class="tpl-pill" data-i18n="card-store-pill-1">WhatsApp Order</span>
+                                <span class="tpl-pill" data-i18n="card-store-pill-2">Promotions</span>
+                                <span class="tpl-pill" data-i18n="card-store-pill-3">QR Code</span>
                             </div>
-                            <a href="store.html" class="tpl-card-btn">
+                            <a href="store.html" class="tpl-card-btn" data-i18n="card-store-btn">
                                 <i class="fas fa-eye"></i> View Template
                             </a>
                         </div>
                     </div>
 
                     <!-- No results message -->
-                    <div class="tpl-no-results" id="tpl-no-results">
-                        No templates found for that filter.
-                    </div>
+                    <div class="tpl-no-results" id="tpl-no-results">No templates found for that filter.</div>
 
                 </div>
             </div>
         </section>
 
-        <!-- ── Bottom CTA ────────────────────────────────────── -->
+        <!-- Bottom CTA -->
         <section class="tpl-bottom-cta">
             <div class="container">
-                <h2>Don't See Your Business Type?</h2>
-                <p>I build custom websites for any type of business — wholesalers, clinics, gyms, real estate agents, and more. Just get in touch and describe what you need.</p>
+                <h2 data-i18n="bottomcta-title">Don't See Your Business Type?</h2>
+                <p data-i18n="bottomcta-desc">I build custom websites for any type of business — wholesalers, clinics, gyms, real estate agents, and more. Just get in touch and describe what you need.</p>
                 <div class="cta-buttons">
-                    <a href="../index.html#contact" class="btn btn-primary">
+                    <a href="../index.html#contact" class="btn btn-primary" data-i18n="bottomcta-btn">
                         <i class="fas fa-paper-plane"></i>&nbsp; Request a Custom Template
                     </a>
-                    <a href="https://wa.me/905525691563?text=Hi!%20I%27d%20like%20a%20custom%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <a href="https://wa.me/905525691563?text=Hi!%20I%27d%20like%20a%20custom%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="cta-wa">
                         <i class="fab fa-whatsapp"></i>&nbsp; WhatsApp Me
                     </a>
                 </div>
@@ -522,8 +355,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Sultan Sanjar Mughis</h3>
-                    <p>Computer Engineer building modern websites for restaurants, cafes, hotels, law firms, stores, and all kinds of small businesses.</p>
+                    <h3 data-i18n="footer-name">Sultan Sanjar Mughis</h3>
+                    <p data-i18n="footer-desc">Computer Engineer building modern websites for restaurants, cafes, hotels, law firms, stores, and all kinds of small businesses.</p>
                     <div class="social-links">
                         <a href="https://github.com/sultanSM6" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/sultan-sanjar-mughis-01933a196/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -531,52 +364,48 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Templates</h3>
+                    <h3 data-i18n="footer-tpl-heading">Templates</h3>
                     <ul>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="cafe.html">Cafe</a></li>
-                        <li><a href="lawyer.html">Law Firm</a></li>
-                        <li><a href="hotel.html">Hotel</a></li>
-                        <li><a href="store.html">Store / Shop</a></li>
+                        <li><a href="restaurant.html" data-i18n="footer-restaurant">Restaurant</a></li>
+                        <li><a href="cafe.html"        data-i18n="footer-cafe">Cafe</a></li>
+                        <li><a href="lawyer.html"      data-i18n="footer-lawyer">Law Firm</a></li>
+                        <li><a href="hotel.html"       data-i18n="footer-hotel">Hotel</a></li>
+                        <li><a href="store.html"       data-i18n="footer-store">Store / Shop</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer-ql-heading">Quick Links</h3>
                     <ul>
-                        <li><a href="../index.html">← Back to Portfolio</a></li>
-                        <li><a href="../index.html#about">About</a></li>
-                        <li><a href="../index.html#services">Services</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="../index.html"          data-i18n="footer-back">← Back to Portfolio</a></li>
+                        <li><a href="../index.html#about"    data-i18n="nav-about">About</a></li>
+                        <li><a href="../index.html#services" data-i18n="nav-services">Services</a></li>
+                        <li><a href="../index.html#contact"  data-i18n="nav-contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Sultan Sanjar Mughis. All rights reserved. | Built with passion and dedication</p>
+                <p data-i18n="footer-copyright">&copy; 2025 Sultan Sanjar Mughis. All rights reserved. | Built with passion and dedication</p>
             </div>
         </div>
     </footer>
 
     <script src="template.js"></script>
     <script>
-        // ── Filter logic ─────────────────────────────────────
+        // Filter logic
         const filterBtns = document.querySelectorAll('.tpl-filter-btn');
         const cards      = document.querySelectorAll('.tpl-card');
         const noResults  = document.getElementById('tpl-no-results');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active button
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
                 const filter = btn.getAttribute('data-filter');
                 let visibleCount = 0;
-
                 cards.forEach(card => {
                     const match = filter === 'all' || card.getAttribute('data-category') === filter;
                     if (match) {
                         card.classList.remove('hidden-card');
-                        // Small stagger so cards animate in one by one
                         setTimeout(() => card.classList.add('visible'), visibleCount * 80);
                         visibleCount++;
                     } else {
@@ -584,7 +413,6 @@
                         card.classList.remove('visible');
                     }
                 });
-
                 noResults.style.display = visibleCount === 0 ? 'block' : 'none';
             });
         });

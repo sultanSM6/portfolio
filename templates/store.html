@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="template-extra.css">
 </head>
-<body class="template-page">
+<body class="template-page" data-page="store">
 
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading-screen"><div class="loader"></div></div>
@@ -28,6 +28,16 @@
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
         <i class="fas fa-sun" id="theme-icon"></i>
     </button>
+
+    <!-- Language Toggle — ADD THIS RIGHT HERE -->
+    <div class="language-toggle" id="language-toggle">
+        <button class="lang-btn active" data-lang="en" aria-label="English">
+            <img src="https://flagcdn.com/16x12/us.png" alt="USA Flag" class="flag-img">
+        </button>
+        <button class="lang-btn" data-lang="tr" aria-label="Türkçe">
+            <img src="https://flagcdn.com/16x12/tr.png" alt="Turkey Flag" class="flag-img">
+        </button>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
